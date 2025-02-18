@@ -1,0 +1,89 @@
+# Ignore Visual Studio specific files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore Rider specific files
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+.idea_modules/
+# Rider logs and workspace settings
+# Uncomment if you want to ignore all Rider settings completely
+# .idea/
+
+# Ignore build output
+bin/
+obj/
+Debug/
+Release/
+build/
+publish/
+
+# Ignore NuGet packages
+*.nupkg
+*.snupkg
+packages/
+# Uncomment if you want to force NuGet to always restore packages
+# !packages/repositories.config
+
+# Ignore .NET generated files
+*.pidb
+*.svclog
+*.scc
+*.cache
+*.pdb
+*.ilk
+*.obj
+*.resources
+*.tlog
+*.log
+*.vsp
+*.vspx
+*.log
+
+# Ignore Resharper files
+_ReSharper.Caches/
+
+# Ignore Rider/JetBrains project settings
+.idea/
+*.sln.iml
+
+# Ignore temporary files
+*.bak
+*.tmp
+*.old
+*.orig
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore user secrets (if using ASP.NET Core)
+secrets.json
+
+# Ignore Entity Framework migrations history
+Migrations/
+
+# Ignore JetBrains Rider workspace files
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/libraries
+.idea/modules.xml
+.idea/.idea.lock
+
+# Ignore local environment variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
+

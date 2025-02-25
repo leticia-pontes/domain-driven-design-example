@@ -1,4 +1,4 @@
-﻿using Universidade.Domain;
+using Universidade.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace Universidade.Infra;
@@ -6,9 +6,16 @@ namespace Universidade.Infra;
 public class AppDbContext : DbContext
 {
     public DbSet<Aluno> Alunos { get; set; }
+    public DbSet<Professor> Professores { get; set; }
 
-    protected override void OnConfiguring(DbContextOptions)
+    public AppDbContext() : base() { }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer();
+        if (!optionsBuilder.IsConfigured)
+        {
+            optionsBuilder.UseMySql("Server=localhost;Database=Universidade;User=root;Password=Kh@leesi154;",
+                new MySqlServerVersion(new Version(8, 0, 28)));
+        }
     }
 }
